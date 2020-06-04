@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/Header";
-import LandingPage from "./LandingPage/LandingPage";
+import Card from "./components/cards/Card";
 
 function App() {
   return (
     <div>
       <Header />
-      <LandingPage />
+      <div className="page-container">
+        <Card />
+      </div>
     </div>
   );
 }
