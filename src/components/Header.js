@@ -1,15 +1,19 @@
 import React from "react";
 import Nav from "../components/nav/Nav";
+import AppMenu from "../components/appMenu/AppMenu";
 
 const Header = () => {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.header}>
-        <span style={styles.header.first}>Dev</span>
-        <span style={styles.header.second}>Cards</span>
-      </h1>
-      <Nav />
-    </div>
+    <>
+      <div style={styles.container}>
+        <h1 style={styles.header}>
+          <span style={styles.header.first}>Dev</span>
+          <span style={styles.header.second}>Cards</span>
+        </h1>
+        <Nav />
+      </div>
+      <AppMenu />
+    </>
   );
 };
 

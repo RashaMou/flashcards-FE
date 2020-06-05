@@ -1,14 +1,17 @@
 import React from "react";
+import { Switch } from "react-router";
 import "./App.css";
-import Header from "./components/Header";
-import FlashCard from "./components/cards/FlashCard";
+import DeckList from "./components/decks/DeckList";
+import CardList from "./components/cards/CardList";
 
 function App() {
   return (
     <div>
-      <Header />
       <div className="page-container" style={styles.container}>
-        <FlashCard />
+        <Switch>
+          <CardList />
+          <DeckList />
+        </Switch>
       </div>
     </div>
   );

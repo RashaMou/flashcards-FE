@@ -1,0 +1,35 @@
+p {
+  margin-top: 1em;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 400px;
+  margin: 100px auto 0;
+  text-align: left;
+}
+
+.card-background,
+.card-main {
+  box-shadow: 0 5px 10px fade(black, 10%), 0 0 0 1px fade(black, 10%);
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: rotate(3deg);
+  background: pink;
+}
+
+.card-main {
+  position: relative;
+  padding: 40px;
+  color: white;
+  background: rgb(105, 104, 102);
+}
