@@ -1,20 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import Avatar from "@material-ui/core/Avatar";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
 
 const Nav = () => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <>
-      <ul style={styles.container}>
-        <li>Account</li>
-      </ul>
+      <Avatar
+        src="/broken-image.jpg"
+        style={styles.account}
+        onClick={handleClick}
+      />
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>Account</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
     </>
   );
 };
 
 const styles = {
-  container: {
-    listStyle: "none",
-    display: "flex",
-    justifyContent: "space-between",
+  account: {
     marginRight: "20px",
   },
 };
